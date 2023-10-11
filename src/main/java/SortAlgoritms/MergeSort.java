@@ -1,5 +1,7 @@
 package SortAlgoritms;
 
+import java.util.Arrays;
+
 public class MergeSort {
     public static void main(String[] args) {
 
@@ -22,10 +24,16 @@ public class MergeSort {
           int mid = (start + end)/2 ;
           mergeSort(input , start , mid);
           mergeSort(input , mid , end );
+
           merge(input , start , mid , end);
 
     }
     public static void merge(int[] input , int start , int mid , int end){
+
+        System.out.println("input.toString() = " + Arrays.toString(input));
+        System.out.println("start = " + start);
+        System.out.println("mid = " + mid);
+        System.out.println("end = " + end);
 
         if(input[mid-1] <= input[mid]){
             return ;
